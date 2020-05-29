@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjetoMVC3C
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : Form
     {
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
         }
@@ -20,6 +20,21 @@ namespace ProjetoMVC3C
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
