@@ -64,7 +64,7 @@
   <ItemGroup>
     <Compile Include="BLL\BLL.cs" />
     <Compile Include="DAL\DALMysql.cs" />
-    <Compile Include="DTO\DTO.cs" />
+    <Compile Include="DTO\tblClienteDTO.cs" />
     <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
