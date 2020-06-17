@@ -15,10 +15,48 @@ namespace ProjetoMVC3C.DTO
         public int Tpusuario { get => tpusuario; set => tpusuario = value; }
         public string Nome_cliente { get => nome_cliente; set => nome_cliente = value; }
         public string Sobrenome_cliente { get => sobrenome_cliente; set => sobrenome_cliente = value; }
-        public string Email_cliente { get => email_cliente; set => email_cliente = value; }
-        public string Senha_cliente { get => senha_cliente; set => senha_cliente = value; }
         public string Cpf_cliente { get => cpf_cliente; set => cpf_cliente = value; }
+
+        // utilizando o DTo para realizar a validação de campos
+        public string Email_cliente { 
+        
+            set
+            {
+                if (value != string.Empty)
+                {
+                    this.email_cliente = value;
+                }
+                else
+                {
+                    throw new Exception("O campo Email é obrigatório.");
+                }
+            }
+            get { return this.email_cliente; }
+            
+
+        }
+     
+    public string Senha_cliente
+    {
+
+        set
+        {
+            if (value != string.Empty)
+            {
+                this.senha_cliente = value;
+            }
+            else
+            {
+                throw new Exception("O campo Email é obrigatório.");
+            }
+        }
+        get { return this.senha_cliente; }
+
+
     }
+
+
+}
 
      
 }

@@ -92,6 +92,7 @@
             this.btnEntrar.Size = new System.Drawing.Size(97, 54);
             this.btnEntrar.TabIndex = 0;
             this.btnEntrar.UseVisualStyleBackColor = true;
+            this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
             // frmLogin
             // 
@@ -109,6 +110,7 @@
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

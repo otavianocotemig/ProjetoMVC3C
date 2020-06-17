@@ -62,7 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\BLL.cs" />
+    <Compile Include="BLL\tblClienteBLL.cs" />
     <Compile Include="DAL\DALMysql.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
     <Compile Include="UI\Login.cs">

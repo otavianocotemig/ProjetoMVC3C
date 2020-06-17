@@ -36,5 +36,15 @@ namespace ProjetoMVC3C
         {
             this.Close();
         }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
