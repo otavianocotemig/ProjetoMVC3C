@@ -53,6 +53,7 @@ namespace ProjetoMVC3C
                 tblClienteDTO cliente = new tblClienteDTO();
                 cliente.Email_cliente = txtEmail.Text.Trim();
                 cliente.Senha_cliente = txtSenha.Text.Trim();
+                Double Senha = double.Parse(txtSenha.Text);
                 // Instanciando a BLL para pesquisa do email e senha do cliente no banco
                 tblClienteBLL bllCliente = new tblClienteBLL();
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
