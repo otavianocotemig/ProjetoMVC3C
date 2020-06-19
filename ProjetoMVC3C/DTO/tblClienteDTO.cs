@@ -47,7 +47,7 @@ namespace ProjetoMVC3C.DTO
             }
             else
             {
-                throw new Exception("O campo Email é obrigatório.");
+                throw new Exception("O campo Senha é obrigatório.");
             }
         }
         get { return this.senha_cliente; }
