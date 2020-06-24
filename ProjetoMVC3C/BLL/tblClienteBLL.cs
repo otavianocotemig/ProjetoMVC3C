@@ -14,6 +14,7 @@ namespace ProjetoMVC3C.BLL
 
         public Boolean Autenticar(string email, string senha)
         {
+            // criação da string para conexão.
            string consulta = string.Format($@"select * from tbl_cliente where email_cliente = '{email}' and senha_cliente = '{senha}';");
            DataTable dt = DaoBanco.executarConsulta(consulta);
            if (dt.Rows.Count == 1)
