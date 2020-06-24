@@ -34,13 +34,14 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
+            this.lblEsqueciSenha = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(114, 35);
+            this.lblEmail.Location = new System.Drawing.Point(26, 26);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(37, 13);
             this.lblEmail.TabIndex = 1;
@@ -48,14 +49,14 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(117, 51);
+            this.txtEmail.Location = new System.Drawing.Point(29, 42);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(221, 20);
             this.txtEmail.TabIndex = 2;
             // 
             // txtSenha
             // 
-            this.txtSenha.Location = new System.Drawing.Point(117, 93);
+            this.txtSenha.Location = new System.Drawing.Point(29, 84);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '*';
             this.txtSenha.Size = new System.Drawing.Size(221, 20);
@@ -66,7 +67,7 @@
             // 
             this.lblSenha.AutoSize = true;
             this.lblSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSenha.Location = new System.Drawing.Point(114, 77);
+            this.lblSenha.Location = new System.Drawing.Point(26, 68);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(43, 13);
             this.lblSenha.TabIndex = 3;
@@ -77,7 +78,7 @@
             // 
             this.btnSair.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btnSair.Image = global::ProjetoMVC3C.Properties.Resources.icnlogout;
-            this.btnSair.Location = new System.Drawing.Point(242, 144);
+            this.btnSair.Location = new System.Drawing.Point(154, 135);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(96, 54);
             this.btnSair.TabIndex = 5;
@@ -87,18 +88,30 @@
             // btnEntrar
             // 
             this.btnEntrar.Image = global::ProjetoMVC3C.Properties.Resources.icnLogin;
-            this.btnEntrar.Location = new System.Drawing.Point(116, 144);
+            this.btnEntrar.Location = new System.Drawing.Point(28, 135);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(97, 54);
             this.btnEntrar.TabIndex = 0;
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
             // 
+            // lblEsqueciSenha
+            // 
+            this.lblEsqueciSenha.AutoSize = true;
+            this.lblEsqueciSenha.Location = new System.Drawing.Point(69, 219);
+            this.lblEsqueciSenha.Name = "lblEsqueciSenha";
+            this.lblEsqueciSenha.Size = new System.Drawing.Size(116, 13);
+            this.lblEsqueciSenha.TabIndex = 6;
+            this.lblEsqueciSenha.TabStop = true;
+            this.lblEsqueciSenha.Text = "Escqueci minha Senha";
+            this.lblEsqueciSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEsqueciSenha_LinkClicked);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(475, 257);
+            this.ClientSize = new System.Drawing.Size(279, 257);
+            this.Controls.Add(this.lblEsqueciSenha);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.lblSenha);
@@ -124,6 +137,7 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.LinkLabel lblEsqueciSenha;
     }
 }
 

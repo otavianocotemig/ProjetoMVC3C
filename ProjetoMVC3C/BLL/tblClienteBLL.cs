@@ -27,6 +27,22 @@ namespace ProjetoMVC3C.BLL
             }
 
         }
+        // Metodo para recuperacao de senha do usuário
+        public string RecuperaSenha(string email)
+        {
+            string consulta = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            DataTable dt = DaoBanco.executarConsulta(consulta);
+            if (dt.Rows.Count == 1)
+            {
+                return dt.Rows[0]["senha_cliente"].ToString();
+            }
+            else
+            {
+                return "Senha não Localizada.";
+            }
+
+        }
+
 
     }
 }
