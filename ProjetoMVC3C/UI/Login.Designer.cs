@@ -100,10 +100,10 @@
             this.lblEsqueciSenha.AutoSize = true;
             this.lblEsqueciSenha.Location = new System.Drawing.Point(69, 219);
             this.lblEsqueciSenha.Name = "lblEsqueciSenha";
-            this.lblEsqueciSenha.Size = new System.Drawing.Size(116, 13);
+            this.lblEsqueciSenha.Size = new System.Drawing.Size(110, 13);
             this.lblEsqueciSenha.TabIndex = 6;
             this.lblEsqueciSenha.TabStop = true;
-            this.lblEsqueciSenha.Text = "Escqueci minha Senha";
+            this.lblEsqueciSenha.Text = "Esqueci minha Senha";
             this.lblEsqueciSenha.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblEsqueciSenha_LinkClicked);
             // 
             // frmLogin

@@ -1,5 +1,6 @@
 ﻿using ProjetoMVC3C.BLL;
 using ProjetoMVC3C.DTO;
+using ProjetoMVC3C.UI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -59,10 +60,15 @@ namespace ProjetoMVC3C
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
                 {
                     MessageBox.Show("Seja bemVindo", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Hide();
+                    FrmMain FrmPrincipal = new FrmMain();
+                    FrmPrincipal.ShowDialog();
+                    this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Cliente não Localizado", "Falhou!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }catch (Exception ex)
             {
@@ -74,9 +80,21 @@ namespace ProjetoMVC3C
 
         private void lblEsqueciSenha_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            tblClienteBLL bllCliente = new tblClienteBLL();
-            MessageBox.Show("Senha : "+bllCliente.RecuperaSenha(txtEmail.Text.Trim()), "Senha!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            
+            try
+            {
+
+                tblClienteDTO clienteDTO = new tblClienteDTO();
+                clienteDTO.Email_cliente = txtEmail.Text;
+                tblClienteBLL bllCliente = new tblClienteBLL();
+                MessageBox.Show("Senha : "+bllCliente.RecuperaSenha(txtEmail.Text.Trim()), "Senha!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtSenha.Text = bllCliente.RecuperaSenha(txtEmail.Text.Trim());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
         }
     }
 }
