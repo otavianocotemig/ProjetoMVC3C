@@ -98,7 +98,7 @@
             // 
             this.lblEmailUsuarioLogado.AutoSize = true;
             this.lblEmailUsuarioLogado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailUsuarioLogado.Location = new System.Drawing.Point(329, 24);
+            this.lblEmailUsuarioLogado.Location = new System.Drawing.Point(351, 196);
             this.lblEmailUsuarioLogado.Name = "lblEmailUsuarioLogado";
             this.lblEmailUsuarioLogado.Size = new System.Drawing.Size(41, 13);
             this.lblEmailUsuarioLogado.TabIndex = 2;

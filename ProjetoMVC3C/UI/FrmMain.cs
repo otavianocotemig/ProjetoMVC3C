@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoMVC3C.BLL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,6 +31,12 @@ namespace ProjetoMVC3C.UI
         private void FrmMain_Load(object sender, EventArgs e)
         {
             lblEmailUsuarioLogado.Text = frmLogin.email_usuario_logado;
+            tblClienteBLL bllcliente = new tblClienteBLL();
+            if (bllcliente.VerificarTipoUsuario(frmLogin.email_usuario_logado) == "1")
+            {
+                this.administraçãoToolStripMenuItem.Visible = false;
+            }
+
         }
     }
 }
