@@ -21,5 +21,15 @@ namespace ProjetoMVC3C.UI
         {
             Close();
         }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FrmMain_Load(object sender, EventArgs e)
+        {
+            lblEmailUsuarioLogado.Text = frmLogin.email_usuario_logado;
+        }
     }
 }

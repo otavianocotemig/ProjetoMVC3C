@@ -15,6 +15,9 @@ namespace ProjetoMVC3C
 {
     public partial class frmLogin : Form
     {
+        // Armazenar o email do usuario logado
+        public static string email_usuario_logado;
+
         public frmLogin()
         {
             InitializeComponent();
@@ -60,6 +63,9 @@ namespace ProjetoMVC3C
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
                 {
                     MessageBox.Show("Seja bemVindo", "Sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Armazenou o valor da variavel global estática para uso no sistema.
+                    email_usuario_logado = cliente.Email_cliente;
+
                     this.Hide();
                     FrmMain FrmPrincipal = new FrmMain();
                     FrmPrincipal.ShowDialog();

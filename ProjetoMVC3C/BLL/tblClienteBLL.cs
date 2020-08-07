@@ -43,6 +43,19 @@ namespace ProjetoMVC3C.BLL
 
         }
 
-
+        // Metodo para recuperacao do tipo do usuário
+        public string VerificarTipoUsuario(string email)
+        {
+            string consulta = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            DataTable dt = DaoBanco.executarConsulta(consulta);
+            if (dt.Rows.Count == 1)
+            {
+                return dt.Rows[0]["tp_usuario"].ToString();
+            }
+            else
+            {
+                return "Tipo Usuario não localizado";
+            }
+        }
     }
 }
