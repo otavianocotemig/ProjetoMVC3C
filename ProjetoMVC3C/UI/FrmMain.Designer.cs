@@ -66,6 +66,7 @@
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
             this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
+            this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
             // 
             // meuPerfilToolStripMenuItem
             // 

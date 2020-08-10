@@ -57,5 +57,12 @@ namespace ProjetoMVC3C.BLL
                 return "Tipo Usuario não localizado";
             }
         }
+        // Metodo criado para alterar senha do usuário
+        public void AlterarSenha(string email, string senha)
+        {
+            string sql = string.Format($@"UPDATE TBL_CLIENTE SET senha_cliente = '{senha}' where email_cliente = '{email}';");
+            DaoBanco.executarComando(sql);
+
+        }
     }
 }

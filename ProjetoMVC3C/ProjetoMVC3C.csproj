@@ -65,6 +65,12 @@
     <Compile Include="BLL\tblClienteBLL.cs" />
     <Compile Include="DAL\DALMysql.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
+    <Compile Include="UI\FrmAlterarSenha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmAlterarSenha.Designer.cs">
+      <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="UI\FrmAlterarSenha.resx">
+      <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
