@@ -1,4 +1,5 @@
 ﻿using ProjetoMVC3C.DAL;
+using ProjetoMVC3C.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -64,5 +65,23 @@ namespace ProjetoMVC3C.BLL
             DaoBanco.executarComando(sql);
 
         }
+        // Metodo para Listar dados do clientes
+        public DataTable ListarClientes(string email)
+        {
+            string sql = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            return DaoBanco.executarConsulta(sql);
+        }
+        //Metodo utilizado para alterar os dados do cliente
+        public void AlterarCliente(tblClienteDTO dtocliente)
+        {
+            string sql = string.Format($@"UPDATE tbl_cliente set nome_cliente = '{dtocliente.Nome_cliente}',
+                                                               sobrenome_cliente = '{dtocliente.Sobrenome_cliente}',
+                                                               cpf_cliente = '{dtocliente.Cpf_cliente}',
+                                                               senha_cliente = '{dtocliente.Senha_cliente}'
+                                                 where email_cliente = '{dtocliente.Email_cliente}';");
+            DaoBanco.executarComando(sql);                                                                    
+
+        }   
+
     }
 }
