@@ -36,6 +36,7 @@
             this.setupBancoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblEmailUsuarioLogado = new System.Windows.Forms.Label();
+            this.manutençãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,14 +65,15 @@
             // 
             this.alterarSenhaToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("alterarSenhaToolStripMenuItem.Image")));
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Meu Perfil";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
             // 
             // administraçãoToolStripMenuItem
             // 
             this.administraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setupBancoDeDadosToolStripMenuItem});
+            this.setupBancoDeDadosToolStripMenuItem,
+            this.manutençãoDeClientesToolStripMenuItem});
             this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
             this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.administraçãoToolStripMenuItem.Text = "Administração";
@@ -79,7 +81,7 @@
             // setupBancoDeDadosToolStripMenuItem
             // 
             this.setupBancoDeDadosToolStripMenuItem.Name = "setupBancoDeDadosToolStripMenuItem";
-            this.setupBancoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
+            this.setupBancoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
             this.setupBancoDeDadosToolStripMenuItem.Text = "Setup Banco de Dados";
             // 
             // sairToolStripMenuItem
@@ -98,6 +100,13 @@
             this.lblEmailUsuarioLogado.Size = new System.Drawing.Size(41, 13);
             this.lblEmailUsuarioLogado.TabIndex = 2;
             this.lblEmailUsuarioLogado.Text = "label1";
+            // 
+            // manutençãoDeClientesToolStripMenuItem
+            // 
+            this.manutençãoDeClientesToolStripMenuItem.Name = "manutençãoDeClientesToolStripMenuItem";
+            this.manutençãoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.manutençãoDeClientesToolStripMenuItem.Text = "Manutenção de Clientes";
+            this.manutençãoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeClientesToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -125,5 +134,6 @@
         private System.Windows.Forms.ToolStripMenuItem setupBancoDeDadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Label lblEmailUsuarioLogado;
+        private System.Windows.Forms.ToolStripMenuItem manutençãoDeClientesToolStripMenuItem;
     }
 }
