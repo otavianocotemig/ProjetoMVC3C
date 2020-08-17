@@ -117,4 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnNovo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAK
+        jAAACowBvcbP2AAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADpSURBVFhH7ZdB
+        CoNADEU9QpcuBT2NMNJDeY5KPYlH6B30Di6n+eNYbPtJkWKz6CyeSEzmB9Qfknnvd1N0dV5d3aXs3QRw
+        jxjL/QQNahTd+VT2zSjC/plmxDNWo0GDGiLWvos/aFmNBg1qiMjwIrplYDUaNKhR9e5GhAN4xmo0aFAj
+        NZAaSA0c0sBir8HhBhyiITnzKkiYWc0WyYGRtatth8HCvf1oMDvqPItTjSQcD7Th7RipNOEHTPYNmL8C
+        84/Q/DfEZQ/xECaerDg1kBr4kwZEyHYxERHb1WyxbcPlFGCIxCn65XrusztpgTm/9CzTQwAAAABJRU5E
+        rkJggg==
+</value>
+  </data>
 </root>

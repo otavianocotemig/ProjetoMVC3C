@@ -47,7 +47,7 @@ namespace ProjetoMVC3C.UI
 
         private void manutençãoDeClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FrmCliente frmCliente = new FrmCliente();
+            FrmCliente FrmCliente = new FrmCliente();
             FrmCliente.ShowDialog();
         }
     }

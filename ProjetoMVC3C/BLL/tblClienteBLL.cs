@@ -65,12 +65,20 @@ namespace ProjetoMVC3C.BLL
             DaoBanco.executarComando(sql);
 
         }
-        // Metodo para Listar dados do clientes
+        // Metodo para Listar dados do clientes pelo email
         public DataTable ListarClientes(string email)
         {
             string sql = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
             return DaoBanco.executarConsulta(sql);
         }
+        // Metodo para Listar todos os clientes do Banco de Dados
+        public DataTable ListarClientes()
+        {
+            string sql = string.Format($@"select * from tbl_cliente");
+            return DaoBanco.executarConsulta(sql);
+        }
+
+
         //Metodo utilizado para alterar os dados do cliente
         public void AlterarCliente(tblClienteDTO dtocliente)
         {
@@ -82,6 +90,20 @@ namespace ProjetoMVC3C.BLL
             DaoBanco.executarComando(sql);                                                                    
 
         }   
+        // Metodo utilizado para Inserir dados do Cliente no Banco de Dados
+        public void InserirCliente(tblClienteDTO ObjCliente)
+        {
+            string sql = string.Format($@"INSERT INTO tbl_cliente VALUES (NULL,'{ObjCliente.Nome_cliente}',
+                                                                          '{ObjCliente.Sobrenome_cliente}',
+                                                                          '{ObjCliente.Email_cliente}',
+                                                                          '{ObjCliente.Senha_cliente}',
+                                                                          '{ObjCliente.Cpf_cliente}',
+                                                                           '{ObjCliente.Tpusuario}');");
+            DaoBanco.executarComando(sql);
+
+
+        }
+
 
     }
 }

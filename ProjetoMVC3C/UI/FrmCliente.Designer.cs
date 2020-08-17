@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCliente));
+            this.GridClientes = new System.Windows.Forms.DataGridView();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCpf = new System.Windows.Forms.TextBox();
@@ -41,16 +42,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnNovo = new System.Windows.Forms.Button();
+            this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // GridClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 236);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(614, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.GridClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridClientes.Location = new System.Drawing.Point(12, 251);
+            this.GridClientes.Name = "GridClientes";
+            this.GridClientes.Size = new System.Drawing.Size(614, 150);
+            this.GridClientes.TabIndex = 0;
             // 
             // txtSenha
             // 
@@ -149,11 +153,47 @@
             this.label5.TabIndex = 28;
             this.label5.Text = "Código";
             // 
+            // btnNovo
+            // 
+            this.btnNovo.FlatAppearance.BorderSize = 0;
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.Image = ((System.Drawing.Image)(resources.GetObject("btnNovo.Image")));
+            this.btnNovo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNovo.Location = new System.Drawing.Point(522, 201);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(104, 44);
+            this.btnNovo.TabIndex = 43;
+            this.btnNovo.TabStop = false;
+            this.btnNovo.Text = "NOVO";
+            this.btnNovo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // cmbTipoUsuario
+            // 
+            this.cmbTipoUsuario.FormattingEnabled = true;
+            this.cmbTipoUsuario.Location = new System.Drawing.Point(151, 198);
+            this.cmbTipoUsuario.Name = "cmbTipoUsuario";
+            this.cmbTipoUsuario.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoUsuario.TabIndex = 45;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(43, 201);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 13);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Tipo Usuário";
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 432);
+            this.Controls.Add(this.cmbTipoUsuario);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtCpf);
@@ -166,12 +206,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.GridClientes);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmCliente";
             this.Text = "Manutenção de Clientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,7 +220,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GridClientes;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCpf;
@@ -192,5 +233,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.ComboBox cmbTipoUsuario;
+        private System.Windows.Forms.Label label2;
     }
 }
