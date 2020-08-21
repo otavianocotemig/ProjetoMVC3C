@@ -54,5 +54,40 @@ namespace ProjetoMVC3C.UI
             }
 
         }
+
+        private void GridClientes_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+            txtCodigo.Text = GridClientes.Rows[e.RowIndex].Cells[0].Value.ToString();
+            txtNome.Text = GridClientes.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtSobrenome.Text = GridClientes.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txtEmail.Text = GridClientes.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txtSenha.Text = GridClientes.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txtCpf.Text = GridClientes.Rows[e.RowIndex].Cells[5].Value.ToString();
+            // Habilitar o botao Excluir
+            this.btnExcluir.Enabled = true;
+
+
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                  if (MessageBox.Show("Está ação irá deletar o registro selecionado e não poderá ser desfeito, deseja continuar?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
+                  {
+                    dtoCliente.Id_cliente = Convert.ToInt32(txtCodigo.Text);
+                    bllCliente.ExcluirCliente(dtoCliente);
+                    GridClientes.DataSource = bllCliente.ListarClientes();
+                  }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+        }
     }
 }

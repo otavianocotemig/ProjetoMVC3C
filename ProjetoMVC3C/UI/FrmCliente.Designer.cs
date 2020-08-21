@@ -45,6 +45,7 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.cmbTipoUsuario = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.GridClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,6 +56,7 @@
             this.GridClientes.Name = "GridClientes";
             this.GridClientes.Size = new System.Drawing.Size(614, 150);
             this.GridClientes.TabIndex = 0;
+            this.GridClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GridClientes_CellClick);
             // 
             // txtSenha
             // 
@@ -186,11 +188,29 @@
             this.label2.TabIndex = 44;
             this.label2.Text = "Tipo Usuário";
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.FlatAppearance.BorderSize = 0;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btnExcluir.Image")));
+            this.btnExcluir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExcluir.Location = new System.Drawing.Point(412, 201);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(104, 44);
+            this.btnExcluir.TabIndex = 46;
+            this.btnExcluir.TabStop = false;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(653, 432);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.cmbTipoUsuario);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnNovo);
@@ -236,5 +256,6 @@
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.ComboBox cmbTipoUsuario;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

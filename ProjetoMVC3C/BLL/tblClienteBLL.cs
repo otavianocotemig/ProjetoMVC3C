@@ -103,6 +103,14 @@ namespace ProjetoMVC3C.BLL
 
 
         }
+        // Metodo Responsavel por excluir cliente
+        public void ExcluirCliente(tblClienteDTO objCliente)
+        {
+            string sql = string.Format($@"DELETE FROM tbl_cliente where id_cliente = {objCliente.Id_cliente};");
+            DaoBanco.executarComando(sql);
+
+
+        }
 
 
     }
