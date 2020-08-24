@@ -11,6 +11,7 @@ namespace ProjetoMVC3C.DTO
         private int id_cliente, tpusuario;
         private string nome_cliente, sobrenome_cliente, email_cliente, senha_cliente, cpf_cliente;
 
+        // Metodos Get e Set
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
         public int Tpusuario { get => tpusuario; set => tpusuario = value; }
        // utilizando o DTo para realizar a validação de campos

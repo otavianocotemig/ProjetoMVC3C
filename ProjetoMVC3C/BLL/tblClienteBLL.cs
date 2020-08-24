@@ -108,10 +108,13 @@ namespace ProjetoMVC3C.BLL
         {
             string sql = string.Format($@"DELETE FROM tbl_cliente where id_cliente = {objCliente.Id_cliente};");
             DaoBanco.executarComando(sql);
-
-
         }
 
-
+        //Metodo para Pesquisar Clientes
+        public DataTable PesquisarClientes(string condicao)
+        {
+            string sql = string.Format($@"select * from tbl_cliente where "+ condicao);
+            return DaoBanco.executarConsulta(sql);
+        }
     }
 }

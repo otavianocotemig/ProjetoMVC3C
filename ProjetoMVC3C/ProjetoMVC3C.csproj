@@ -63,8 +63,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\tblClienteBLL.cs" />
+    <Compile Include="BLL\tblFornecedorBLL.cs" />
     <Compile Include="DAL\DALMysql.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
+    <Compile Include="DTO\tblFornecedorDTO.cs" />
     <Compile Include="UI\FrmAlterarSenha.cs">
       <SubType>Form</SubType>
     </Compile>

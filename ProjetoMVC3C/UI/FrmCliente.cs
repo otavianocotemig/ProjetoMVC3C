@@ -66,6 +66,7 @@ namespace ProjetoMVC3C.UI
             txtCpf.Text = GridClientes.Rows[e.RowIndex].Cells[5].Value.ToString();
             // Habilitar o botao Excluir
             this.btnExcluir.Enabled = true;
+            btnEditar.Enabled = true;
 
 
         }
@@ -88,6 +89,49 @@ namespace ProjetoMVC3C.UI
 
 
 
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                // Passagem dos dados da UI para o DTO
+                dtoCliente.Nome_cliente = txtNome.Text.ToString();
+                dtoCliente.Sobrenome_cliente = txtSobrenome.Text.ToString();
+                dtoCliente.Email_cliente = txtEmail.Text.ToString();
+                dtoCliente.Senha_cliente = txtSenha.Text.ToString();
+                dtoCliente.Cpf_cliente = txtCpf.Text.ToString();
+
+
+                bllCliente.AlterarCliente(dtoCliente);
+                MessageBox.Show("Cliente Alterado com Sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GridClientes.DataSource = bllCliente.ListarClientes();
+
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+
+        }
+
+        private void btnsair_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            string condicao = "nome_cliente like '%" + txtPesquisaClientes.Text + "%'" +
+                              " or sobrenome_cliente like '%" + txtPesquisaClientes.Text + "%'";
+                
+                ;
+            GridClientes.DataSource = bllCliente.PesquisarClientes(condicao);
         }
     }
 }
