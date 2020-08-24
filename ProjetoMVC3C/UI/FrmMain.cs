@@ -32,7 +32,7 @@ namespace ProjetoMVC3C.UI
         {
             lblEmailUsuarioLogado.Text = frmLogin.email_usuario_logado;
             tblClienteBLL bllcliente = new tblClienteBLL();
-            if (bllcliente.VerificarTipoUsuario(frmLogin.email_usuario_logado) == "1")
+            if (bllcliente.VerificarTipoUsuario(frmLogin.email_usuario_logado) == "2")
             {
                 this.administraçãoToolStripMenuItem.Visible = false;
             }
