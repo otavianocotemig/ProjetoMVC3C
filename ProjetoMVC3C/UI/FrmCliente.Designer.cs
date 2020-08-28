@@ -180,7 +180,7 @@
             this.cmbTipoUsuario.FormattingEnabled = true;
             this.cmbTipoUsuario.Location = new System.Drawing.Point(151, 198);
             this.cmbTipoUsuario.Name = "cmbTipoUsuario";
-            this.cmbTipoUsuario.Size = new System.Drawing.Size(121, 21);
+            this.cmbTipoUsuario.Size = new System.Drawing.Size(163, 21);
             this.cmbTipoUsuario.TabIndex = 45;
             // 
             // label2

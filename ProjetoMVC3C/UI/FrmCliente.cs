@@ -18,6 +18,7 @@ namespace ProjetoMVC3C.UI
         // Instanciar as classes de BLL e DTO
         tblClienteBLL bllCliente = new tblClienteBLL();
         tblClienteDTO dtoCliente = new tblClienteDTO();
+        tblTipousuarioBLL bllTipoUsuario = new tblTipousuarioBLL();
 
         public FrmCliente()
         {
@@ -27,6 +28,7 @@ namespace ProjetoMVC3C.UI
         private void FrmCliente_Load(object sender, EventArgs e)
         {
             GridClientes.DataSource = bllCliente.ListarClientes();
+            this.PreencheTipoUsuario();
         }
 
         private void btnNovo_Click(object sender, EventArgs e)
@@ -39,6 +41,7 @@ namespace ProjetoMVC3C.UI
                 dtoCliente.Email_cliente = txtEmail.Text.ToString();
                 dtoCliente.Senha_cliente = txtSenha.Text.ToString();
                 dtoCliente.Cpf_cliente = txtCpf.Text.ToString();
+                dtoCliente.Tpusuario = int.Parse(cmbTipoUsuario.SelectedValue.ToString());
               
 
                 bllCliente.InserirCliente(dtoCliente);
@@ -132,6 +135,15 @@ namespace ProjetoMVC3C.UI
                 
                 ;
             GridClientes.DataSource = bllCliente.PesquisarClientes(condicao);
+        }
+
+        public void PreencheTipoUsuario()
+        {
+            cmbTipoUsuario.DataSource = bllTipoUsuario.ListarTipoUsuario();
+            // Indicar o campo que o usuario verá no combo
+            cmbTipoUsuario.DisplayMember = "descricao";
+            //Indicar o campo que será gravado no banco
+            cmbTipoUsuario.ValueMember = "id";
         }
     }
 }
