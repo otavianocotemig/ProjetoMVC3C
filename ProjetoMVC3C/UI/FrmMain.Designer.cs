@@ -34,9 +34,10 @@
             this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setupBancoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manutençãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblEmailUsuarioLogado = new System.Windows.Forms.Label();
-            this.manutençãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manutençãoDeFonecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,7 +74,8 @@
             // 
             this.administraçãoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.setupBancoDeDadosToolStripMenuItem,
-            this.manutençãoDeClientesToolStripMenuItem});
+            this.manutençãoDeClientesToolStripMenuItem,
+            this.manutençãoDeFonecedoresToolStripMenuItem});
             this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
             this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.administraçãoToolStripMenuItem.Text = "Administração";
@@ -81,8 +83,15 @@
             // setupBancoDeDadosToolStripMenuItem
             // 
             this.setupBancoDeDadosToolStripMenuItem.Name = "setupBancoDeDadosToolStripMenuItem";
-            this.setupBancoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
+            this.setupBancoDeDadosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
             this.setupBancoDeDadosToolStripMenuItem.Text = "Setup Banco de Dados";
+            // 
+            // manutençãoDeClientesToolStripMenuItem
+            // 
+            this.manutençãoDeClientesToolStripMenuItem.Name = "manutençãoDeClientesToolStripMenuItem";
+            this.manutençãoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.manutençãoDeClientesToolStripMenuItem.Text = "Manutenção de Clientes";
+            this.manutençãoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeClientesToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -101,12 +110,12 @@
             this.lblEmailUsuarioLogado.TabIndex = 2;
             this.lblEmailUsuarioLogado.Text = "label1";
             // 
-            // manutençãoDeClientesToolStripMenuItem
+            // manutençãoDeFonecedoresToolStripMenuItem
             // 
-            this.manutençãoDeClientesToolStripMenuItem.Name = "manutençãoDeClientesToolStripMenuItem";
-            this.manutençãoDeClientesToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.manutençãoDeClientesToolStripMenuItem.Text = "Manutenção de Clientes";
-            this.manutençãoDeClientesToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeClientesToolStripMenuItem_Click);
+            this.manutençãoDeFonecedoresToolStripMenuItem.Name = "manutençãoDeFonecedoresToolStripMenuItem";
+            this.manutençãoDeFonecedoresToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.manutençãoDeFonecedoresToolStripMenuItem.Text = "Manutenção de Fonecedores";
+            this.manutençãoDeFonecedoresToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeFonecedoresToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -135,5 +144,6 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Label lblEmailUsuarioLogado;
         private System.Windows.Forms.ToolStripMenuItem manutençãoDeClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem manutençãoDeFonecedoresToolStripMenuItem;
     }
 }

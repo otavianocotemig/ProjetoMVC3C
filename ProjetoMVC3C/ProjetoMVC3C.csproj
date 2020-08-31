@@ -68,6 +68,7 @@
     <Compile Include="DAL\DALMysql.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
     <Compile Include="DTO\tblFornecedorDTO.cs" />
+    <Compile Include="LimpaForm.cs" />
     <Compile Include="UI\FrmAlterarSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +80,12 @@
     </Compile>
     <Compile Include="UI\FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmFornecedor.Designer.cs">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmMain.cs">
       <SubType>Form</SubType>
@@ -99,6 +106,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmFornecedor.resx">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

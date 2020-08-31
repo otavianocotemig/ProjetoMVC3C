@@ -47,6 +47,9 @@ namespace ProjetoMVC3C.UI
                 bllCliente.InserirCliente(dtoCliente);
                 MessageBox.Show("Cliente inserido com Sucesso", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 GridClientes.DataSource = bllCliente.ListarClientes();
+                //
+                // Limpar os Campos
+                new LimpaForm(this);
 
 
 
@@ -144,6 +147,11 @@ namespace ProjetoMVC3C.UI
             cmbTipoUsuario.DisplayMember = "descricao";
             //Indicar o campo que será gravado no banco
             cmbTipoUsuario.ValueMember = "id";
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
