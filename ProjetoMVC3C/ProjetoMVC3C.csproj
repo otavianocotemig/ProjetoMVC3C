@@ -64,10 +64,12 @@
   <ItemGroup>
     <Compile Include="BLL\tblClienteBLL.cs" />
     <Compile Include="BLL\tblFornecedorBLL.cs" />
+    <Compile Include="BLL\tblProdutoBLL.cs" />
     <Compile Include="BLL\tblTipousuarioBLL.cs" />
     <Compile Include="DAL\DALMysql.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
     <Compile Include="DTO\tblFornecedorDTO.cs" />
+    <Compile Include="DTO\tblProdutoDTO.cs" />
     <Compile Include="LimpaForm.cs" />
     <Compile Include="UI\FrmAlterarSenha.cs">
       <SubType>Form</SubType>
@@ -93,6 +95,12 @@
     <Compile Include="UI\FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FrmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmProduto.Designer.cs">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmProduto.resx">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
