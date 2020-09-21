@@ -62,5 +62,11 @@ namespace ProjetoMVC3C.UI
             FrmProduto FrmProduto = new FrmProduto();
             FrmProduto.ShowDialog();
         }
+
+        private void categoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategorias FrmCategorias = new FrmCategorias();
+            FrmCategorias.ShowDialog();
+        }
     }
 }

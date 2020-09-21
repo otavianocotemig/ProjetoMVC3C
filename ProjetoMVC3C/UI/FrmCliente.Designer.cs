@@ -196,6 +196,7 @@
             this.txtPesquisaClientes.Name = "txtPesquisaClientes";
             this.txtPesquisaClientes.Size = new System.Drawing.Size(310, 20);
             this.txtPesquisaClientes.TabIndex = 49;
+            this.txtPesquisaClientes.TextChanged += new System.EventHandler(this.txtPesquisaClientes_TextChanged);
             // 
             // btnPesquisar
             // 

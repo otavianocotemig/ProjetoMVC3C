@@ -37,7 +37,7 @@
             this.GridProdutos.AllowUserToAddRows = false;
             this.GridProdutos.AllowUserToDeleteRows = false;
             this.GridProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridProdutos.Location = new System.Drawing.Point(12, 121);
+            this.GridProdutos.Location = new System.Drawing.Point(12, 145);
             this.GridProdutos.Name = "GridProdutos";
             this.GridProdutos.ReadOnly = true;
             this.GridProdutos.Size = new System.Drawing.Size(776, 282);

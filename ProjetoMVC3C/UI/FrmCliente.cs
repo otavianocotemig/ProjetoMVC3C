@@ -153,5 +153,10 @@ namespace ProjetoMVC3C.UI
         {
 
         }
+
+        private void txtPesquisaClientes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -46,5 +46,6 @@ namespace ProjetoMVC3C.DTO
         }
 
         public string Telefone { get => telefone; set => telefone = value; }
+       
     }
 }

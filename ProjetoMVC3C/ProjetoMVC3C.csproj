@@ -62,11 +62,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\tblCategoriaBLL.cs" />
     <Compile Include="BLL\tblClienteBLL.cs" />
     <Compile Include="BLL\tblFornecedorBLL.cs" />
     <Compile Include="BLL\tblProdutoBLL.cs" />
     <Compile Include="BLL\tblTipousuarioBLL.cs" />
     <Compile Include="DAL\DALMysql.cs" />
+    <Compile Include="DTO\tblCategoriaDTO.cs" />
     <Compile Include="DTO\tblClienteDTO.cs" />
     <Compile Include="DTO\tblFornecedorDTO.cs" />
     <Compile Include="DTO\tblProdutoDTO.cs" />
@@ -76,6 +78,12 @@
     </Compile>
     <Compile Include="UI\FrmAlterarSenha.Designer.cs">
       <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FrmCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmCategorias.Designer.cs">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FrmCliente.cs">
       <SubType>Form</SubType>
@@ -111,6 +119,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="UI\FrmAlterarSenha.resx">
       <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmCategorias.resx">
+      <DependentUpon>FrmCategorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>

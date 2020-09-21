@@ -36,9 +36,10 @@
             this.setupBancoDeDadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manutençãoDeClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manutençãoDeFonecedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manutençãoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblEmailUsuarioLogado = new System.Windows.Forms.Label();
-            this.manutençãoDeProdutosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,7 +78,8 @@
             this.setupBancoDeDadosToolStripMenuItem,
             this.manutençãoDeClientesToolStripMenuItem,
             this.manutençãoDeFonecedoresToolStripMenuItem,
-            this.manutençãoDeProdutosToolStripMenuItem});
+            this.manutençãoDeProdutosToolStripMenuItem,
+            this.categoriasToolStripMenuItem});
             this.administraçãoToolStripMenuItem.Name = "administraçãoToolStripMenuItem";
             this.administraçãoToolStripMenuItem.Size = new System.Drawing.Size(96, 20);
             this.administraçãoToolStripMenuItem.Text = "Administração";
@@ -102,6 +104,13 @@
             this.manutençãoDeFonecedoresToolStripMenuItem.Text = "Manutenção de Fonecedores";
             this.manutençãoDeFonecedoresToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeFonecedoresToolStripMenuItem_Click);
             // 
+            // manutençãoDeProdutosToolStripMenuItem
+            // 
+            this.manutençãoDeProdutosToolStripMenuItem.Name = "manutençãoDeProdutosToolStripMenuItem";
+            this.manutençãoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.manutençãoDeProdutosToolStripMenuItem.Text = "Manutenção de Produtos";
+            this.manutençãoDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeProdutosToolStripMenuItem_Click);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
@@ -119,12 +128,12 @@
             this.lblEmailUsuarioLogado.TabIndex = 2;
             this.lblEmailUsuarioLogado.Text = "label1";
             // 
-            // manutençãoDeProdutosToolStripMenuItem
+            // categoriasToolStripMenuItem
             // 
-            this.manutençãoDeProdutosToolStripMenuItem.Name = "manutençãoDeProdutosToolStripMenuItem";
-            this.manutençãoDeProdutosToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.manutençãoDeProdutosToolStripMenuItem.Text = "Manutenção de Produtos";
-            this.manutençãoDeProdutosToolStripMenuItem.Click += new System.EventHandler(this.manutençãoDeProdutosToolStripMenuItem_Click);
+            this.categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            this.categoriasToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
+            this.categoriasToolStripMenuItem.Text = "Categorias";
+            this.categoriasToolStripMenuItem.Click += new System.EventHandler(this.categoriasToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -155,5 +164,6 @@
         private System.Windows.Forms.ToolStripMenuItem manutençãoDeClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manutençãoDeFonecedoresToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem manutençãoDeProdutosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriasToolStripMenuItem;
     }
 }

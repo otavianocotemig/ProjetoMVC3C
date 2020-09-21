@@ -21,6 +21,12 @@ namespace ProjetoMVC3C.BLL
               string sql = string.Format($@"select * from tbl_fornecedor");
               return DaoBanco.executarConsulta(sql);
         }
+
+        public DataTable ListarFornecedores(string condicao)
+        {
+            string sql = string.Format($@"select * from tbl_fornecedor where " + condicao);
+            return DaoBanco.executarConsulta(sql);
+        }
         // Incluir Fornecedores
         public void IncluirFornecedor(tblFornecedorDTO dtoFornecedor)
         {
@@ -30,7 +36,22 @@ namespace ProjetoMVC3C.BLL
             DaoBanco.executarComando(sql);
 
         }
+        // Metodo para Alterar o fornecedor
+        public void AlterarFornecedor(tblFornecedorDTO dtoFornecedor)
+        {
+            string sql = string.Format($@"UPDATE tbl_Fornecedor set nome = '{dtoFornecedor.Nome}',
+                                                                email = '{dtoFornecedor.Email}',
+                                                                telefone = '{dtoFornecedor.Telefone}'
+                                                 where id  = '{dtoFornecedor.Id}';");
+            DaoBanco.executarComando(sql);
 
+        }
+        //Metodo para Excluir Fornecedor
+        public void ExcluirFornecedor(tblFornecedorDTO dtoFornecedor)
+        {
+            string sql = string.Format($@"DELETE FROM tbl_fornecedor where id = {dtoFornecedor.Id};");
+            DaoBanco.executarComando(sql);
+        }
 
 
     }
