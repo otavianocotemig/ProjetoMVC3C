@@ -23,7 +23,11 @@ namespace ProjetoMVC3C.BLL
                                                                           '{dtoproduto.Quantidade}',
                                                                           '{dtoproduto.Peso}',
                                                                            '{dtoproduto.Tbl_categoria_id}',
-                                                                           '{dtoproduto.Tbl_fornecedor_id}');");
+                                                                           '{dtoproduto.Tbl_fornecedor_id}',
+                                                                           '{dtoproduto.Foto}');");
+
+       
+
             daoBanco.executarComando(sql);
             
         }
@@ -32,6 +36,26 @@ namespace ProjetoMVC3C.BLL
         {
             string sql = string.Format($@"select * from tbl_produto");
             return daoBanco.executarConsulta(sql);
+        }
+        // Metodo para Excluir Produtos
+        public void ExcluirProduto(tblProdutoDTO objProduto)
+        {
+            string sql = string.Format($@"DELETE FROM tbl_produto where id = {objProduto.Id};");
+            daoBanco.executarComando(sql);
+        }
+        // Metodo Para Alterar
+        public void AlterarProduto(tblProdutoDTO dtoProduto)
+        {
+            string sql = string.Format($@"UPDATE tbl_produto set nomeProduto = '{dtoProduto.NomeProduto}',
+                                                               descricao =   '{dtoProduto.Descricao}',
+                                                               preco  = '{dtoProduto.Preco}',
+                                                               Quantidade =  '{dtoProduto.Quantidade}',
+                                                               peso =  '{dtoProduto.Peso}',
+                                                               tbl_categoria_id =  '{dtoProduto.Tbl_categoria_id}',
+                                                               tbl_fornecedor_id =  '{dtoProduto.Tbl_fornecedor_id}'
+                                                 where id  = '{dtoProduto.Id}';");
+            daoBanco.executarComando(sql);
+
         }
 
     }

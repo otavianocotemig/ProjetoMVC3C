@@ -10,7 +10,7 @@ namespace ProjetoMVC3C.DTO
     {
         private int id, tbl_categoria_id, tbl_fornecedor_id, quantidade;
         private double peso, preco;
-        private string nomeProduto, descricao;
+        private string nomeProduto, descricao,foto;
 
         public int Id { get => id; set => id = value; }
         public int Tbl_categoria_id { get => tbl_categoria_id; set => tbl_categoria_id = value; }
@@ -18,6 +18,7 @@ namespace ProjetoMVC3C.DTO
         public double Peso { get => peso; set => peso = value; }
         public double Preco { get => preco; set => preco = value; }
         public string NomeProduto { get => nomeProduto; set => nomeProduto = value; }
+        public string Foto { get => foto; set => foto = value; }
 
         public int Quantidade
         {
