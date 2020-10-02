@@ -47,9 +47,9 @@
             this.txtPeso = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbCategoria = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbFornecedor = new System.Windows.Forms.ComboBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.GridProdutos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -227,17 +227,8 @@
             this.cmbCategoria.FormattingEnabled = true;
             this.cmbCategoria.Location = new System.Drawing.Point(189, 176);
             this.cmbCategoria.Name = "cmbCategoria";
-            this.cmbCategoria.Size = new System.Drawing.Size(215, 21);
+            this.cmbCategoria.Size = new System.Drawing.Size(189, 21);
             this.cmbCategoria.TabIndex = 65;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(83, 179);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 66;
-            this.label7.Text = "Categoria";
             // 
             // label8
             // 
@@ -253,17 +244,28 @@
             this.cmbFornecedor.FormattingEnabled = true;
             this.cmbFornecedor.Location = new System.Drawing.Point(189, 205);
             this.cmbFornecedor.Name = "cmbFornecedor";
-            this.cmbFornecedor.Size = new System.Drawing.Size(215, 21);
+            this.cmbFornecedor.Size = new System.Drawing.Size(189, 21);
             this.cmbFornecedor.TabIndex = 67;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(83, 184);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(52, 13);
+            this.linkLabel1.TabIndex = 69;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Categoria";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // FrmProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 450);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbFornecedor);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbCategoria);
             this.Controls.Add(this.txtPeso);
             this.Controls.Add(this.label4);
@@ -311,8 +313,8 @@
         private System.Windows.Forms.TextBox txtPeso;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbCategoria;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbFornecedor;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }

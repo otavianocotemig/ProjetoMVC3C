@@ -79,6 +79,12 @@
     <Compile Include="UI\FrmAlterarSenha.Designer.cs">
       <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FrmCadCategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FrmCadCategoria.Designer.cs">
+      <DependentUpon>FrmCadCategoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FrmCategorias.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="UI\FrmAlterarSenha.resx">
       <DependentUpon>FrmAlterarSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FrmCadCategoria.resx">
+      <DependentUpon>FrmCadCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FrmCategorias.resx">
       <DependentUpon>FrmCategorias.cs</DependentUpon>

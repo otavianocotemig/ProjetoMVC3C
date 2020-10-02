@@ -15,7 +15,7 @@ namespace ProjetoMVC3C.BLL
 
         public DataTable ListarCategoria()
         {
-            string sql = string.Format($@"select * from tbl_categoria");
+            string sql = string.Format($@"select * from tbl_categoria order by Descricao");
             return DaoBanco.executarConsulta(sql);
             //Remover a varíável foi idéia do Yuri.
         }
@@ -24,6 +24,14 @@ namespace ProjetoMVC3C.BLL
         {
             string sql = string.Format($@"select * from tbl_categoria where " + condicao);
             return DaoBanco.executarConsulta(sql);
+        }
+
+        // Incluir Categorias
+        public void IncluirCategoria(tblCategoriaDTO dtoCategoria)
+        {
+            string sql = string.Format($@"INSERT INTO tbl_Categoria VALUES (NULL,'{dtoCategoria.Descricao}');");
+            DaoBanco.executarComando(sql);
+
         }
 
     }

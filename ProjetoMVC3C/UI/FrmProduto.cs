@@ -154,5 +154,12 @@ namespace ProjetoMVC3C.UI
                 MessageBox.Show("Erro: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FrmCadCategoria FrmCadCategoria = new FrmCadCategoria();
+            FrmCadCategoria.ShowDialog();
+            this.PreencheCategoria();
+        }
     }
 }
